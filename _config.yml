@@ -6,7 +6,7 @@
 # --- Required options --- #
 
 # Name of website
-title: Do People With Different Ideologies Speak Differently?
+title: ADA Project @ EPFL
 
 # Your name to show in the footer
 author: The InternationADAs
@@ -14,18 +14,19 @@ author: The InternationADAs
 # --- List of links in the navigation bar --- #
 
 navbar-links:
+  Introduction: "#introduction"
+  Climate Change in US Politics: "#climatechangeinuspolitics"
   About Us: "aboutus"
 
 # --- Logo --- #
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon-ideologies.jpeg"
+#avatar: "/assets/img/avatar-icon-ideologies.jpeg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
-round-avatar: true
+#round-avatar: true
 
-cover-img: "/assets/img/bigimg-dem-rep.jpeg"
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
