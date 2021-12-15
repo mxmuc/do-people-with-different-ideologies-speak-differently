@@ -15,9 +15,6 @@ author: The InternationADAs
 
 navbar-links:
   About Us: "aboutus"
-  NLP Methodologies: "nlp"
-    - Similarity Measures using BERT: ""
-    - Topic Detection: ""
 
 # --- Logo --- #
 
