@@ -16,6 +16,9 @@ author: The InternationADAs
 navbar-links:
   Introduction: "#introduction"
   Climate Change in US Politics: "#climatechangeinuspolitics"
+  Quote Similarities: "#quotesimilarities"
+  Topic Detection: "#topicdetection"
+  Semantic Analysis: "#semanticanalysis"
   About Us: "aboutus"
 
 # --- Logo --- #
