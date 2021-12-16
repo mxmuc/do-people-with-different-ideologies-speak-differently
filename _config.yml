@@ -11,7 +11,7 @@ title: ADA Project @ EPFL
 # Your name to show in the footer
 author: The InternationADAs
 
-
+full-width: true
 # --- List of links in the navigation bar --- #
 
 navbar-links:
@@ -104,12 +104,12 @@ post_search: true
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#FFFFFF"
+navbar-col: "#DDDDDD"
 navbar-text-col: "#404040"
 #navbar-border-col: "#DDDDDD"
 page-col: "#FFFFFF"
 text-col: "#404040"
-link-col: "#008AFF"
+link-col: "#DA291C"
 hover-col: "#D52B1E"
 footer-col: "#EAEAEA"
 footer-text-col: "#777777"
