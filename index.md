@@ -27,6 +27,7 @@ There are several aspects and subtopics about how one can discuss climate change
 <embed src="/assets/html/climate_change_topics_lda.html"
                width="900"
                height="600"/>
+
 <br />
 {% include pyldavis.html %}
 <br /> 
