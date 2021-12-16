@@ -24,6 +24,7 @@ Using the example of climate change, this data story aims to provide evidence th
 {: style="text-align: justify" }
 There are several aspects and subtopics about how one can discuss climate change. To detect underlying topics and affiliate quotes with their dominant topic, we followed a structured workflow to build an insightful model based on the **Latent Dirichlet Allocation (LDA) algorithm**. Before creating the topic model using `gensim's native LdaModel` library, we  cleaned and tokenized the quotes and additionally added bigrams to the model.
 <br /> 
+<div style="text-align: center"><iframe src="/assets/html/climate_change_topics_lda.html"></iframe></div>
 {% include pyldavis.html %}
 <br /> 
 <br /> 
@@ -37,9 +38,7 @@ We were able to group the quotations around **three distinct topics**. The word 
 
 ![Topic Word Count and Importance](/assets/img/topic_word_count_important_keywords.png){:class="displayed"}
 
-<div class="image-box">
-  <img src="/assets/img/topic_cluster_bokeh.png">
-</div>
+{% include bokeh.html %}
 <br /> 
 <br /> 
 
