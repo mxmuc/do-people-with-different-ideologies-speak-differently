@@ -88,6 +88,9 @@ Making everything more tangible, we look at the top three speakers for each part
 ![Top 3 Speakers Similarity](/assets/img/top_3_similarities.png){:class="displayed"}
 <br />
 <br />
+
+The second step instead consisted in looking at quotes similarities at **person level**. Again using cosine similarity, we are able to construct a similarity matrix storing similarities for all possible speaker-to-speaker combinations. Considering that at this point the number of speakers was of exactly 5'442, still very high, plotting them is neither useful nor pretty. We instead present an interactive undirected network graph, showing the top-3 similarities for the 50 most talkative persons from each party. [Play around with it](https://mxmuc.github.io/do-people-with-different-ideologies-speak-differently/assets/html/person_lvl_similarity.html) for as long as you want. The network was created using `pyvis` library and some good ol' `javascript`.
+
 <br />
 
 ## Topic Detection <a name="topicdetection"></a>
