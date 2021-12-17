@@ -13,12 +13,13 @@ One of the most pressing problems facing our society today is animosity across p
 
 {: style="text-align: justify" }
 Using the example of climate change, this data story aims to provide evidence that the discussion around this phenomenon is highly polarized and that this polarization is motivated by differences between socio-political subgroups. To achieve this, we extracted quotations related to climate change that have been uttered by Democrats and Republicans between 2015 and 2020 from the quotebank dataset. We then enriched these quotations with socio-demographic data and clustered the quotation embeddings as a means to identify prominent topics. Measuring within-topic and between-topic group affiliation, our work aims to contribute to a deeper understanding of how group divisions manifest themselves in language.
-
+<br />
+<br />
 
 ## Climate Change in US Politics <a name="climatechangeinuspolitics"></a>
 
 {: style="text-align: justify" }
-Starting from an initial preprocessing and filtering phase, which consists in discarding quotes delivered from speakers not affiliated with either Republicans or Democrats together with quotes from speakers who changed political parties between 2015 and 2020, the remaining dataset contains now **5,286,461 quotations**. Out of these, **2,528,204** are from **Republicans** and **2'758'257** from **Democrats**.
+Starting from an initial preprocessing and filtering phase, which consists in discarding quotes delivered from speakers not affiliated with either Republicans or Democrats together with quotes from speakers who changed political parties between 2015 and 2020, we focus on a remodeled dataset containing **5,286,461 quotations**. Out of these, **2,528,204** are from **Republicans** and **2,758,257** from **Democrats**.
 
 ![Quotes Per Party](/assets/img/quotes_per_party_initial.png){:class="displayed"}
 
@@ -59,12 +60,11 @@ The Republicans have talked more about climate change only during three short ti
 Furthermore, the peak for Democrats i.e., the period where the ratio is at its maximum value, corresponds to the minimum for Republicans. This fact already suggests that some way of polarization in topic selection occurred.
 <br />
 <br />
-<br />
 
-## Quote Similarities <a name="quotesimilarities"></a>
+## Quotes Similarities <a name="quotesimilarities"></a>
 
 {: style="text-align: justify" }
-Getting a deeper understanding of how polarization manifests itself in language, we used `BERT’s pre-trained Sentence Transformer` to embed the quotations into numerical arrays of the same length. With these embeddings as a vantage point, we could now use similarity metrics such as the cosine similarity to investigate within-party and between-party polarization. The evaluated cosine similarity yields a continuous number between 0 and 1, with a higher value indicating a higher similarity.
+Getting a deeper understanding of how polarization manifests itself in language, we use `BERT’s pre-trained Sentence Transformer` to embed the quotations into numerical arrays of the same length (768 digits). With these embeddings as a vantage point, we could now use similarity metrics such as the cosine similarity to investigate within-party and between-party polarization. The evaluated cosine similarity yields a continuous number between 0 and 1, with a higher value indicating a higher similarity. It's worth noticing that the similarity metric presented is more precisely a semantic similarity between 2 sentences (ie. how similar is their meaning).
 
 {: style="text-align: justify" }
 Our first step along the NLP path yielded the following results:
@@ -89,8 +89,8 @@ Making everything more tangible, we look at the top three speakers for each part
 <br />
 <br />
 
-The second step instead consisted in looking at quotes similarities at **person level**. Again using cosine similarity, we are able to construct a similarity matrix storing similarities for all possible speaker-to-speaker combinations. Considering that at this point the number of speakers was of exactly 5'442, still very high, plotting them is neither useful nor pretty. We instead present an interactive undirected network graph, showing the top-3 similarities for the 50 most talkative persons from each party. [Play around with it](https://mxmuc.github.io/do-people-with-different-ideologies-speak-differently/assets/html/person_lvl_similarity.html) for as long as you want. The network was created using `pyvis` library and some good ol' `javascript`.
-
+The second step instead consisted in looking at quotes similarities at **person level**. Again using cosine similarity, we are able to construct a similarity matrix storing similarities for all possible speaker-to-speaker combinations. Considering that at this point the number of speakers was of exactly 5,442, still very high, plotting them is neither useful nor pretty. We instead present an interactive undirected network graph, showing the **top-3 similarities for the 50 most talkative persons from each party**. [Play around with it](https://mxmuc.github.io/do-people-with-different-ideologies-speak-differently/assets/html/person_lvl_similarity.html) for as long as you want. The network was created using `pyvis` library and some good ol' `javascript`.
+<br />
 <br />
 
 ## Topic Detection <a name="topicdetection"></a>
