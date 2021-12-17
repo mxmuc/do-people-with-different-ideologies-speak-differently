@@ -15,42 +15,67 @@ One of the most pressing problems facing our society today is animosity across p
 Using the example of climate change, this data story aims to provide evidence that the discussion around this phenomenon is highly polarized and that this polarization is motivated by differences between socio-political subgroups. To achieve this, we extracted quotations related to climate change that have been uttered by Democrats and Republicans between 2015 and 2020 from the quotebank dataset. We then enriched these quotations with socio-demographic data and clustered the quotation embeddings as a means to identify prominent topics. Measuring within-topic and between-topic group affiliation, our work aims to contribute to a deeper understanding of how group divisions manifest themselves in language.
 
 
-## US Politicians talking about climate change <a name="climatechangeinuspolitics"></a>
-#### Exploratory Data Analysis
-In every data story, the first step always consist in exploring the available data. Starting from a initial preprocessing and filtering phase, which consist in discarding quotes delivered from speakers not affiliated with either Republicans and Democrats together with quotes from speakers who changed political parties between 2015 and 2020, the remaining dataset contains now 5'286'461 quotations. Out of all these quotations, 2'528'204 are from Republican's speakers and 2'758'257 from Democrats.
+## Climate Change in US Politics <a name="climatechangeinuspolitics"></a>
+
+{: style="text-align: justify" }
+Starting from an initial preprocessing and filtering phase, which consists in discarding quotes delivered from speakers not affiliated with either Republicans or Democrats together with quotes from speakers who changed political parties between 2015 and 2020, the remaining dataset contains now **5,286,461 quotations**. Out of these, **2,528,204** are from **Republicans** and **2'758'257** from **Democrats**.
 
 ![Quotes Per Party](/assets/img/quotes_per_party_initial.png){:class="displayed"}
 
-Grouping by speaker for further analysis, the quotations are from 15'826 different speakers (7'899 of which are Republicans and 7'972 Democrats). The 2 sets are balanced.
+{: style="text-align: justify" }
+Grouping by speaker for further analysis, we obtained quotations from **15,826 different speakers (7,899 of which are Republicans and 7,972 Democrats)**. Hence, the two sets are balanced.
 
 ![Quotes Per Speaker](/assets/img/quotes_per_speaker_rep_dem.png){:class="displayed"}
 
-Analizing the gender ratio, it is noticeable that female speakers are significantly less quoted than the male speakers, but they are more frequent in the Democrats than in the Republicans party.
-In particular, only 16.56% of the republican quotes are delivered from women, whereas the percentage raise to 34.50% in the Democrats party.
+{: style="text-align: justify" }
+Analyzing the gender ratio, it is noticeable that female speakers are significantly less quoted than the male speakers, but they are more frequent in the Democrats than in the Republican party.
+In particular, only 16.56% of the Republican quotes are delivered by women, whereas the percentage raises to 34.50% in the Democratic party.
 
-#### Climate change topic selection
+#### Climate Change Topic Selection
 
-In order to better focus on the wide reasearch question, we decided to concentrate our exploration on Climate Change related quotations only. Here the division between the 2 parties visibly changes. The dataset now is unbalanced, as shown below. There are significantly many more quotes from Democrats with respect to Republicans.
+{: style="text-align: justify" }
+In order to better focus on the wide reasearch question, we decided to concentrate our exploration on **climate change** related quotations only. Here the division between the two parties visibly changes. The dataset becomes unbalanced, as shown below. There are significantly more quotes from Democrats compared to Republicans. This is a first indication that Democrats discuss climate change more than Republicans.
 
 ![Climate Change Quotes Per Party](/assets/img/climate_change_quotes_per_party.png){:class="displayed"}
 
 
-#### How often do Republicans and Democrats talk about climate change ?
+#### How Often Do Republicans and Democrats Talk About Climate Change ?
 
-Answering this question now is straightforward. By analyzing the time series of the ratio of climate change related quotes over the total number of quotes, we can observe how often the topic was present in the normal flow of topics covered by all quotations.
+{: style="text-align: justify" }
+By analyzing the time series of the ratio of climate change related quotes over the total number of quotes, we can observe how often the topic was covered by these politicians throughout 2015-2020.
 
-The following plot shows the time series with granularity on days, dividing the quotes according to the party. The ratio is shown in log-scale.
+{: style="text-align: justify" }
+The following plot visualizes the share of climate change quotes as a time series on a day-by-day base. The ratio is shown in log-scale.
 
 ![Quotes Per Day](/assets/img/time_series_day.png){:class="displayed"}
 
-From it we can extract that Democrats talk more often about Climate Change. To better show this difference, we decided to change the granularity from day to month, being the most reasonable choice. The difference now results even more evident.
+{: style="text-align: justify" }
+We can now confirm that Democrats talk more often about climate change than Republicans. To better display this difference, we decided to change the granularity from day to month, being the most reasonable choice. The difference is now clearly visible.
 
 ![Quotes Per Month](/assets/img/time_series_month.png){:class="displayed"}
 
-The Republicans have talked more than Democrats about climate change only during three short time periods, but besides that, Democrats ratio dominate significantly over the Republicans.
-Furthermore, the maximum peak for Democrats i.e. the period where the ratio is at its maximum value, correspond to the minimum peak for Republicans. This fact suggest that some form of polarization might have occurred. However, without taking into account the attidutes that the different parties have toward the topic by conducting a deeper analisys, we cannot make any conclusion about it.
+{: style="text-align: justify" }
+The Republicans have talked more about climate change only during three short time periods. Diving deeper into these three points could be an interesting starting point for future research.
+Furthermore, the peak for Democrats i.e., the period where the ratio is at its maximum value, corresponds to the minimum for Republicans. This fact already suggests that some way of polarization in topic selection occurred.
 
 ## Quote Similarities <a name="quotesimilarities"></a>
+
+{: style="text-align: justify" }
+Getting a deeper understanding of how polarization manifests itself in language, we used `BERT’s pre-trained Sentence Transformer` to embed the quotations into numerical arrays of the same length. With these embeddings as a vantage point, we could now use similarity metrics such as the cosine similarity to investigate within-party and between-party polarization. The evaluated cosine similarity yields a continuous number between 0 and 1, with a higher value indicating a higher similarity.
+
+{: style="text-align: justify" }
+Our first step along the NLP path yielded the following results:
+
+- On average quotations uttered by _Democrats_ have a higher similarity with each other than with any other socio-political subgroup. We therefore conclude a **low within-party polarization within the _Democratic party_ when looking at climate change**.
+
+- The average quote similarity within the _Republican party_ is even lower than the similarity between the two parties. This indicates that **discussions around climate change are highly polarized amongst _Republicans_**.
+
+INSERT TWO PLOTS HERE
+
+Making everything more tangible, we look at the top three speakers for each party, whose quotes have the highest within-party and between-party similarity. Looking at the Democrats - interestingly - **high-ranking politicians** such as the former president Bill Clinton, US representative Adam Schiff and senator Richard Blumenthal **lead the similarity ranking - both within their own party and between parties**. We can only hypothesize about this effect being linked to an overwhelming amount of quotes for these politicians and their mediator role. Even the top three Republicans, former governor of Ohio John Kasich, US representative Fred Upton and governor of New Hampshire Chris Sununu have a higher between-party similarity than within-party similarity. This again underlines the **high polarization within the Republican party**.
+
+INSERT OTHER PLOT HERE
+
 
 ## Topic Detection <a name="topicdetection"></a>
 
@@ -99,7 +124,7 @@ Below figure visualizes the share of quotes by party affiliation and gender for 
 #### Are Democrats really more concerned about climate change than Republicans?
 
 {: style="text-align: justify" }
-Language is rich in subtle signals and quotes can convey different connotations. Having gained a first understanding about how polarization is motivated by socio-political differences, we dive deeper using semantic analysis. Therefore, we use `Empath`, a tool developed at Stanford that can generate and validate new lexical categories from a set of seed terms. We use `Empath` to validate whether Democrats are really more concerned about climate change than Republicans?
+Language is rich in subtle signals and quotes can convey different connotations. Having gained a first understanding about how polarization is motivated by socio-political differences, we dive deeper using semantic analysis. Therefore, we use `Empath`, a tool developed at Stanford University that can generate and validate new lexical categories from a set of seed terms. We use `Empath` to validate whether Democrats are really more concerned about climate change than Republicans?
 
 <br />
 
