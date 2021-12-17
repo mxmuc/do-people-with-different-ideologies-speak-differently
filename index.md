@@ -17,7 +17,7 @@ Using the example of climate change, this data story aims to provide evidence th
 
 ## US Politicians talking about climate change <a name="climatechangeinuspolitics"></a>
 #### Exploratory Data Analysis
-In every data story, the first step always consist in exploring the available data. Starting from a initial preprocessing and filtering phase, which consist in discarding quotes delivered from speakers not affiliated with either Republicans and Democrats together with quotes from speakers who changed political parties between 2015 and 2020, the remaining dataset contains 5'286'461 quotations. Out of all these quotations, 2'528'204 are from Republican's speakers and 2'758'257 from Democrats.
+In every data story, the first step always consist in exploring the available data. Starting from a initial preprocessing and filtering phase, which consist in discarding quotes delivered from speakers not affiliated with either Republicans and Democrats together with quotes from speakers who changed political parties between 2015 and 2020, the remaining dataset contains now 5'286'461 quotations. Out of all these quotations, 2'528'204 are from Republican's speakers and 2'758'257 from Democrats.
 
 ![Quotes Per Party](/assets/img/quotes_per_party_initial.png){:class="displayed"}
 
@@ -25,29 +25,30 @@ Grouping by speaker for further analysis, the quotations are from 15'826 differe
 
 ![Quotes Per Speaker](/assets/img/quotes_per_speaker_rep_dem.png){:class="displayed"}
 
-
 Analizing the gender ratio, it is noticeable that female speakers are significantly less quoted than the male speakers, but they are more frequent in the Democrats than in the Republicans party.
-In particular, only 16.56 % of the republican quotes are delivered from women, whereas they are the 34.50 % in the Democrats party.
-
+In particular, only 16.56% of the republican quotes are delivered from women, whereas the percentage raise to 34.50% in the Democrats party.
 
 #### Climate change topic selection
 
-However the situation is very different when we consider only the quotes related to climate change
-In fact, there are significantly many more quotes from Democrats.
+In order to better focus on the wide reasearch question, we decided to concentrate our exploration on Climate Change related quotations only. Here the division between the 2 parties visibly changes. The dataset now is unbalanced, as shown below. There are significantly many more quotes from Democrats with respect to Republicans.
 
 ![Climate Change Quotes Per Party](/assets/img/climate_change_quotes_per_party.png){:class="displayed"}
 
 
 #### How often do Republicans and Democrats talk about climate change ?
 
-Analyzing the time series of the ratio of climate change related quotes over the total number of quotes, we can observe how often does the topic came out in the normal flow of topics that the quotes capture.
+Answering this question now is straightforward. By analyzing the time series of the ratio of climate change related quotes over the total number of quotes, we can observe how often the topic was present in the normal flow of topics covered by all quotations.
 
 The following plot shows the time series with granularity on days, dividing the quotes according to the party. The ratio is shown in log-scale.
+
 ![Quotes Per Day](/assets/img/time_series_day.png){:class="displayed"}
-It looks like the Democrats talk more often about it, and changing the granularity from day to month, which is more reasonable, the difference results even more evident.
+
+From it we can extract that Democrats talk more often about Climate Change. To better show this difference, we decided to change the granularity from day to month, being the most reasonable choice. The difference now results even more evident.
+
 ![Quotes Per Month](/assets/img/time_series_month.png){:class="displayed"}
+
 The Republicans have talked more than Democrats about climate change only during three short time periods, but besides that, Democrats ratio dominate significantly over the Republicans.
-Furthermore, the maximum peak for Democrats i.e. the period where the ratio is at its maximum value, correspond to the minimum peak for Republicans. This fact suggest that some form of polarization might occur. However, without taking into account the attidutes that the different parties have toward the topic by conducting a deeper analisys, we cannot make any conclusion about it.
+Furthermore, the maximum peak for Democrats i.e. the period where the ratio is at its maximum value, correspond to the minimum peak for Republicans. This fact suggest that some form of polarization might have occurred. However, without taking into account the attidutes that the different parties have toward the topic by conducting a deeper analisys, we cannot make any conclusion about it.
 
 ## Quote Similarities <a name="quotesimilarities"></a>
 
