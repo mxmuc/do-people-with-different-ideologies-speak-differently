@@ -66,16 +66,26 @@ Getting a deeper understanding of how polarization manifests itself in language,
 {: style="text-align: justify" }
 Our first step along the NLP path yielded the following results:
 
-- On average quotations uttered by _Democrats_ have a higher similarity with each other than with any other socio-political subgroup. We therefore conclude a **low within-party polarization within the _Democratic party_ when looking at climate change**.
+- On average quotations uttered by _Democrats_ have a higher similarity with each other than with any other socio-political subgroup. We therefore conclude a **low within-party polarization within the _Democratic party_ when looking at climate change**
 
-- The average quote similarity within the _Republican party_ is even lower than the similarity between the two parties. This indicates that **discussions around climate change are highly polarized amongst _Republicans_**.
+- The average quote similarity within the _Republican party_ is even lower than the similarity between the two parties. This indicates that **discussions around climate change are highly polarized amongst _Republicans_**
+<br />
+<br />
+<br />
 
-INSERT TWO PLOTS HERE
+:-------------------------:|:-------------------------:
+![Similarity Distribution](/assets/img/similarity_frequency.png){:class="displayed"}  |  ![Similarity Between Within](/assets/img/similarity_between_within.png){:class="displayed"}
+
+<br />
 
 Making everything more tangible, we look at the top three speakers for each party, whose quotes have the highest within-party and between-party similarity. Looking at the Democrats - interestingly - **high-ranking politicians** such as the former president Bill Clinton, US representative Adam Schiff and senator Richard Blumenthal **lead the similarity ranking - both within their own party and between parties**. We can only hypothesize about this effect being linked to an overwhelming amount of quotes for these politicians and their mediator role. Even the top three Republicans, former governor of Ohio John Kasich, US representative Fred Upton and governor of New Hampshire Chris Sununu have a higher between-party similarity than within-party similarity. This again underlines the **high polarization within the Republican party**.
+<br />
+<br />
 
-INSERT OTHER PLOT HERE
-
+![Top 3 Speakers Similarity](/assets/img/top_3_similarities.png){:class="displayed"}
+<br />
+<br />
+<br />
 
 ## Topic Detection <a name="topicdetection"></a>
 
@@ -103,15 +113,15 @@ If the charts below are not yet enough for you, feel free to play around with ou
 {: style="text-align: justify" }
 As we were faced with an imbalanced dataset containing significantly more quotes for Democrats and Men, we balanced the four socio-political subgroups using [Random Oversampling](https://machinelearningmastery.com/random-oversampling-and-undersampling-for-imbalanced-classification/). Through randomly duplicating examples in the minority class (i.e., Republicans and Women), we obtained four subgroups with the same amount of quotes. Looking now at the representation of each subgroup in the different topics, we gain a deeper understanding in how group divisions manifest themselves in the topics discussed. 
 
-- The _gender_ of the speaker has no relevant impact on which aspect of climate change is discussed.
+- The _gender_ of the speaker has no relevant impact on which aspect of climate change is discussed
 
-- The _party_ _affiliation_ of a speaker has a strong impact on the way they discuss climate change.
+- The _party_ _affiliation_ of a speaker has a strong impact on the way they discuss climate change
 
-- _Democrats_ tend to be more worried about the effect of climate change on our future. Whereas _Republicans_ tend to center their discussions around fossil fuels (e.g., oil and coal) and the economic impact of an energy transition. 
+- _Democrats_ tend to be more worried about the effect of climate change on our future. Whereas _Republicans_ tend to center their discussions around fossil fuels (e.g., oil and coal) and the economic impact of an energy transition 
 
-- _Democrats_ discuss climate change more frequently than _Republicans_.
+- _Democrats_ discuss climate change more frequently than _Republicans_
 
-Below figure visualizes the share of quotes by party affiliation and gender for each topic after oversampling. If all topics would be equally frequent discussed between the different socio-political subgroups, all slices would be of same size (i.e., 25%).
+Below figure visualizes the share of quotes by party affiliation and gender for each topic after oversampling. If all topics would be equally frequent discussed between the different socio-political subgroups, all slices would be of same size (i.e., 25%)
 
 <br />
 
