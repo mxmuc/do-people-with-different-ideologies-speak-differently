@@ -15,7 +15,7 @@ One of the most pressing problems facing our society today is animosity across p
 Using the example of climate change, this data story aims to provide evidence that the discussion around this phenomenon is highly polarized and that this polarization is motivated by differences between socio-political subgroups. To achieve this, we extracted quotations related to climate change that have been uttered by Democrats and Republicans between 2015 and 2020 from the quotebank dataset. We then enriched these quotations with socio-demographic data and clustered the quotation embeddings as a means to identify prominent topics. Measuring within-topic and between-topic group affiliation, our work aims to contribute to a deeper understanding of how group divisions manifest themselves in language.
 
 
-## US Politcians talking about climate change <a name="climatechangeinuspolitics"></a>
+## US Politicians talking about climate change <a name="climatechangeinuspolitics"></a>
 #### Exploratory Data Analysis
 
 After an initial preprocessing and filtering step, which included discarding quotes delivered from speakers not affiliated with either Republicans and Democrats, and discarding the quotes from speakers who changed political parties between 2015 and 2020, the dataset contains 5286461 quotations (2528204 from Republicans' speakers and 2758257 from Democrats).
