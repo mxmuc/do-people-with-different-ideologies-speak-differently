@@ -57,6 +57,9 @@ We can now confirm that Democrats talk more often about climate change than Repu
 {: style="text-align: justify" }
 The Republicans have talked more about climate change only during three short time periods. Diving deeper into these three points could be an interesting starting point for future research.
 Furthermore, the peak for Democrats i.e., the period where the ratio is at its maximum value, corresponds to the minimum for Republicans. This fact already suggests that some way of polarization in topic selection occurred.
+<br />
+<br />
+<br />
 
 ## Quote Similarities <a name="quotesimilarities"></a>
 
@@ -149,6 +152,22 @@ As topic 2 is focussed around oil and its economic impact, we have excluded it f
 - Quotations of _Democrats_ convey far more negavtively associated connotations than the ones of Republicans
 
 - _Republicans_ do not get tired of speaking about oil
+<br />
+<br />
+<br />
+
+## Final Words
+
+{: style="text-align: justify" }
+Even if our project only touched the surface of understanding the causes and consequences of media polarization, we learned a lot about how climate change is discussed in US media among Democrats and Republicans. We could validate common hypotheses, such as that Republicans mainly focus their thoughts around fossil fuels when speaking about climate change. Our analysis further showed that Democrats do not just speak more about climate change; they are also more worried about the effects of it on our future. This is expressed through the usage of extreme vocabulary with negative connotations. We were able to show that climate change is a highly polarized topic - especially within the Republican party. Finally, we could not find that the gender of a speaker influences neither the way nor the frequencies one speaks about climate change.
+<br />
+<br />
+
+{: style="text-align: center" }
+This project was realised in 2021 as part of the course ["Applied data analysis" (CS-401)](https://dlab.epfl.ch/teaching/fall2021/cs401/) at the [Swiss Federal Institute of Technology in Lausanne (EPFL)](https://www.epfl.ch/en/)
+
+
+
 
 
 
