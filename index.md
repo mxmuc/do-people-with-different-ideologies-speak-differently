@@ -94,6 +94,7 @@ Below figure visualizes the share of quotes by party affiliation and gender for 
 ![Topic Pie Chart Oversampled by Party and Gender](/assets/img/topic_pie_party_gender_oversampled.png){:class="displayed"}
 <br /> 
 <br /> 
+<br /> 
 
 ## Semantic Analysis <a name="semanticanalysis"></a>
 #### Are Democrats really more concerned about climate change than Republicans?
@@ -101,6 +102,20 @@ Below figure visualizes the share of quotes by party affiliation and gender for 
 {: style="text-align: justify" }
 Language is rich in subtle signals and quotes can convey different connotations. Having gained a first understanding about how polarization is motivated by socio-political differences, we dive deeper using semantic analysis. Therefore, we use `Empath`, a tool developed at Stanford that can generate and validate new lexical categories from a set of seed terms. We use `Empath` to validate whether Democrats are really more concerned about climate change than Republicans?
 
-seed termshow  between socio-political subgroups theAs we were faced with an imbalanced dataset containing significantly more quotes for Democrats and Men, we balanced the four socio-political subgroups using [Random Oversampling](https://machinelearningmastery.com/random-oversampling-and-undersampling-for-imbalanced-classification/). Through randomly duplicating examples in the minority class (i.e., Republicans and Women), we obtained four subgroups with the same amount of quotes. Looking now at the representation of each subgroup in the different topics, we gain a deeper understanding in how group divisions manifest themselves in the topics discussed. 
+<br />
+
+![Empath Bar Chart by Party](/assets/img/empath_topics_1_3.png){:class="displayed"}
+
+<br />
+
+As topic 2 is focussed around oil and its economic impact, we have excluded it for this analysis. We can not directly confirm our above hypotheses, that Democrats are more concerned about climate change than Republicans. However, we could observe the following: 
+
+- _Democrats_ are more likely to use extreme vocabulary when talking about climate change. Way more quotations of Democrats fall into categories such as _crisis_, _war_ and _help_
+
+- Quotations of _Democrats_ convey far more negavtively associated connotations than the ones of Republicans
+
+- _Republicans_ do not get tired of speaking about oil
+
+
 
 
