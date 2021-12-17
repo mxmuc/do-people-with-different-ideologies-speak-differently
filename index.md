@@ -17,13 +17,11 @@ Using the example of climate change, this data story aims to provide evidence th
 
 ## US Politicians talking about climate change <a name="climatechangeinuspolitics"></a>
 #### Exploratory Data Analysis
-
-After an initial preprocessing and filtering step, which included discarding quotes delivered from speakers not affiliated with either Republicans and Democrats, and discarding the quotes from speakers who changed political parties between 2015 and 2020, the dataset contains 5286461 quotations (2528204 from Republicans' speakers and 2758257 from Democrats).
+In every data story, the first step always consist in exploring the available data. Starting from a initial preprocessing and filtering phase, which consist in discarding quotes delivered from speakers not affiliated with either Republicans and Democrats together with quotes from speakers who changed political parties between 2015 and 2020, the remaining dataset contains 5'286'461 quotations. Out of all these quotations, 2'528'204 are from Republican's speakers and 2'758'257 from Democrats.
 
 ![Quotes Per Party](/assets/img/quotes_per_party_initial.png){:class="displayed"}
 
-Furthermore, the quotations comes from 15826 different speakers (7899 of which are Republicans and  7972 Democrats)
-
+Grouping by speaker for further analysis, the quotations are from 15'826 different speakers (7'899 of which are Republicans and 7'972 Democrats). The 2 sets are balanced.
 
 ![Quotes Per Speaker](/assets/img/quotes_per_speaker_rep_dem.png){:class="displayed"}
 
