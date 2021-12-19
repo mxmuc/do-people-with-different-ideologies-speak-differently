@@ -61,10 +61,10 @@ Furthermore, the peak for Democrats i.e., the period where the ratio is at its m
 <br />
 <br />
 
-## Quotes Similarities <a name="quotesimilarities"></a>
+## Quote Similarity <a name="quotesimilarity"></a>
 
 {: style="text-align: justify" }
-Getting a deeper understanding of how polarization manifests itself in language, we use `BERT’s pre-trained Sentence Transformer` to embed the quotations into numerical arrays of the same length (768 digits). With these embeddings as a vantage point, we could now use similarity metrics such as the cosine similarity to investigate within-party and between-party polarization. The evaluated cosine similarity yields a continuous number between 0 and 1, with a higher value indicating a higher similarity. It's worth noticing that the similarity metric presented is more precisely a semantic similarity between 2 sentences (ie. how similar is their meaning).
+Getting a deeper understanding of how polarization manifests itself in language, we use `BERT’s pre-trained Sentence Transformer` to embed the quotations into numerical arrays of the same length (768 digits). With these embeddings as a vantage point, we could now use similarity metrics such as the cosine similarity to investigate within-party and between-party polarization. The evaluated cosine similarity yields a continuous number between 0 and 1, with a higher value indicating a higher similarity. It's worth noticing that the similarity metric presented is more precisely a semantic similarity between 2 sentences (i.e., how similar is their meaning).
 
 {: style="text-align: justify" }
 Our first step along the NLP path yielded the following results:
@@ -81,6 +81,7 @@ Our first step along the NLP path yielded the following results:
 
 <br />
 
+{: style="text-align: justify" }
 Making everything more tangible, we look at the top three speakers for each party, whose quotes have the highest within-party and between-party similarity. Looking at the Democrats - interestingly - **high-ranking politicians** such as the former president Bill Clinton, US representative Adam Schiff and senator Richard Blumenthal **lead the similarity ranking - both within their own party and between parties**. We can only hypothesize about this effect being linked to an overwhelming amount of quotes for these politicians and their mediator role. Even the top three Republicans, former governor of Ohio John Kasich, US representative Fred Upton and governor of New Hampshire Chris Sununu have a higher between-party similarity than within-party similarity. This again underlines the **high polarization within the Republican party**.
 <br />
 <br />
@@ -89,7 +90,8 @@ Making everything more tangible, we look at the top three speakers for each part
 <br />
 <br />
 
-The second step instead consisted in looking at quotes similarities at **person level**. Again using cosine similarity, we are able to construct a similarity matrix storing similarities for all possible speaker-to-speaker combinations. Considering that at this point the number of speakers was of exactly 5,442, still very high, plotting them is neither useful nor pretty. We instead present an interactive undirected network graph, showing the **top-3 similarities for the 50 most talkative persons from each party**. [Play around with it](https://mxmuc.github.io/do-people-with-different-ideologies-speak-differently/assets/html/person_lvl_similarity.html) for as long as you want. The network was created using `pyvis` library and some good ol' `javascript`.
+{: style="text-align: justify" }
+The second step instead consisted in looking at quote similarities at **person level**. Again using cosine similarity, we are able to construct a similarity matrix storing similarities for all possible speaker-to-speaker combinations. Considering that at this point the number of speakers was of exactly 5,442, still very high, plotting them is neither useful nor pretty. We instead present an interactive undirected network graph, showing the **top-3 similarities for the 50 most talkative persons from each party**. [Play around with it](https://mxmuc.github.io/do-people-with-different-ideologies-speak-differently/assets/html/person_lvl_similarity.html) for as long as you want. The network was created using `pyvis` library and some good ol' `javascript`.
 <br />
 <br />
 
@@ -114,7 +116,7 @@ If the charts below are not yet enough for you, feel free to play around with ou
 <br /> 
 <br /> 
 
-#### What are the most discussed topics among Democrats and Republicans?
+#### What Are the Most Discussed Topics Among Democrats and Republicans?
 
 {: style="text-align: justify" }
 As we were faced with an imbalanced dataset containing significantly more quotes for Democrats and Men, we balanced the four socio-political subgroups using [Random Oversampling](https://machinelearningmastery.com/random-oversampling-and-undersampling-for-imbalanced-classification/). Through randomly duplicating examples in the minority class (i.e., Republicans and Women), we obtained four subgroups with the same amount of quotes. Looking now at the representation of each subgroup in the different topics, we gain a deeper understanding in how group divisions manifest themselves in the topics discussed. 
@@ -137,7 +139,7 @@ Below figure visualizes the share of quotes by party affiliation and gender for 
 <br /> 
 
 ## Semantic Analysis <a name="semanticanalysis"></a>
-#### Are Democrats really more concerned about climate change than Republicans?
+#### Are Democrats Really More Concerned About Climate Change Than Republicans?
 
 {: style="text-align: justify" }
 Language is rich in subtle signals and quotes can convey different connotations. Having gained a first understanding about how polarization is motivated by socio-political differences, we dive deeper using semantic analysis. Therefore, we use `Empath`, a tool developed at Stanford University that can generate and validate new lexical categories from a set of seed terms. We use `Empath` to validate whether Democrats are really more concerned about climate change than Republicans?
@@ -147,7 +149,7 @@ Language is rich in subtle signals and quotes can convey different connotations.
 ![Empath Bar Chart by Party](/assets/img/empath_topics_1_3.png){:class="displayed"}
 
 <br />
-
+{: style="text-align: justify" }
 As topic 2 is focussed around oil and its economic impact, we have excluded it for this analysis. We can not directly confirm our above hypotheses, that Democrats are more concerned about climate change than Republicans. However, we could observe the following: 
 
 - _Democrats_ are more likely to use extreme vocabulary when talking about climate change. Way more quotations of Democrats fall into categories such as _crisis_, _war_ and _help_

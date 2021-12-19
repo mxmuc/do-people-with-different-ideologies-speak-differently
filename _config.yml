@@ -17,7 +17,7 @@ full-width: true
 navbar-links:
   Introduction: "#introduction"
   Climate Change in US Politics: "#climatechangeinuspolitics"
-  Quote Similarities: "#quotesimilarities"
+  Quote Similaritiy: "#quotesimilarity"
   Topic Detection: "#topicdetection"
   Semantic Analysis: "#semanticanalysis"
 
